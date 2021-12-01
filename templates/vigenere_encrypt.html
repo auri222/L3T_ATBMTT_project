@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block header %}
+<h1 class="text-center py-3">Vignere encrypt</h1>
+{% endblock header %}
+{% block content %}
+   <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
+          <a href="/Vigenere_decrypt" class="btn btn-warning mb-4">Go to Vignere decrypt</a>
+    </div>
+   <form action="/Vigenere_encrypt" method="post">
+       <div class="row g-2">
+            <div class="col-md-9">
+                <div class="form-floating">
+                  <input type="text" class="form-control" name="plaintxt" id="floatingInput" placeholder="Input plaintext here!" value="{{ text }}">
+                  <label for="floatingInput">Plaintext</label>
+                </div>
+            </div>
+           <div class="col-md-3">
+                <div class="form-floating">
+                  <input type="text" class="form-control" name="keytxt" id="floatingInputKey" placeholder="Input key here!" value="{{ key }}">
+                  <label for="floatingInputKey">Key</label>
+                </div>
+            </div>
+       </div>
+           <div class="d-grid gap-2 mt-2">
+              <input type="submit" class="btn btn-info" value="Encrypt">
+            </div>
+   </form>
+
+    {% if error: %}
+            <div class="alert alert-danger mt-2" role="alert">
+                {{ error }}
+            </div>
+    {% endif %}
+
+    {% if data: %}
+        <div class="alert alert-success mt-2" role="alert">
+            {{ data }}
+        </div>
+    {% endif %}
+{% endblock %}

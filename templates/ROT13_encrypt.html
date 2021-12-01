@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block header %}
+<h1 class="text-center py-3">ROT13 encrypt</h1>
+{% endblock header %}
+{% block content %}
+   <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
+          <a href="/ROT13_decrypt" class="btn btn-warning mb-4">Go to ROT13 decrypt</a>
+    </div>
+   <form action="/ROT13_encrypt" method="POST">
+        <div class="form-floating">
+          <input type="text" class="form-control" name="plaintxt" id="floatingInput" placeholder="Input plaintext here!" value="{{ text }}">
+          <label for="floatingInput">Plaintext</label>
+        </div>
+       <div class="d-grid gap-2 mt-2">
+          <input type="submit" class="btn btn-info" value="Encrypt">
+        </div>
+
+   </form>
+    {% if error: %}
+        <div class="alert alert-danger mt-2" role="alert">
+            {{ error }}
+        </div>
+    {% endif %}
+
+    {% if data: %}
+        <div class="alert alert-success mt-2" role="alert">
+            {{ data }}
+        </div>
+    {% endif %}
+
+{% endblock %}

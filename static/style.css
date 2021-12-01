@@ -1,0 +1,63 @@
+/*@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  min-width: 100vh;
+  background-color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  background-color: #005f99;
+  transition: 0.4s;
+}
+
+.nav-link {
+  font-size: 1.25rem;
+  padding-left: 15px !important;
+}
+
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover {
+  background-color: #0f4c75;
+}
+
+
+.wallpaper {
+margin-left: 250px !important;
+min-height: 100vh;
+background: linear-gradient(rgba(190, 220, 227, 0.7), rgba(65,147,169,0.7)), url("./pexels-cottonbro-6892716.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+.header h1{
+    font-weight: 800 !important;
+    background-image: linear-gradient(90deg, red, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.header h5 {
+    font-weight: bold;
+    background-image: linear-gradient(90deg, red, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.content h1{
+    font-weight: 700;
+}
