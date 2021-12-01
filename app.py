@@ -334,8 +334,8 @@ def Caesar_encrypt():
         if (not text) and (not key):
             error_message = 'Please type in plaintext and key'
             return render_template('caesar_encrypt.html', title='Caesar', text=text, key=key, error=error_message)
-        elif not re.match("^[a-zA-Z]+$", text):
-            error_message='Please type in only UPPERCASE and not number!'
+        elif not re.match("^[a-zA-Z\s]+$", text):
+            error_message='Please type in only UPPERCASE character with spaces and not number!'
             return render_template('caesar_encrypt.html', title='Caesar', text=text, key=key,error=error_message)
         elif not re.match("^[0-9]+$",key):
             error_message='Please type in number for key'
@@ -354,8 +354,8 @@ def Caesar_decrypt():
         if (not text) and (not key):
             error_message = 'Please type in plaintext and key'
             return render_template('caesar_decrypt.html', title='Caesar', text=text, key=key, error=error_message)
-        elif not re.match("^[a-zA-Z]+$", text):
-            error_message = 'Please type in only UPPERCASE and not number!'
+        elif not re.match("^[a-zA-Z\s]+$", text):
+            error_message = 'Please type in only UPPERCASE character with spaces and not number!'
             return render_template('caesar_decrypt.html', title='Caesar', text=text, key=key, error=error_message)
         elif not re.match("^[0-9]+$", key):
             error_message = 'Please type in number for key'

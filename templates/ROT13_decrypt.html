@@ -18,13 +18,13 @@
 
     {% if error: %}
         <div class="alert alert-danger mt-2" role="alert">
-            {{ error }}
+            <p class="text-break">{{ error }}</p>
         </div>
     {% endif %}
 
     {% if data: %}
         <div class="alert alert-success mt-2" role="alert">
-            {{ data }}
+            <p class="text-break">{{ data }}</p>
         </div>
     {% endif %}
 {% endblock %}
